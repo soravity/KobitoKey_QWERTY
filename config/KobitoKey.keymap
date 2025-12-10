@@ -1,6 +1,5 @@
 #include <input/processors.dtsi>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -38,10 +37,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W     &kp E     &kp R        &kp T      &kp Y     &kp U        &kp I      &kp O      &kp P
-&kp A      &kp S     &kp D     &kp F        &kp G      &kp H     &kp J        &kp K      &kp L      &kp SEMI
-&kp Z      &kp X     &kp C     &kp V        &kp B      &kp N     &kp M        &kp COMMA  &kp DOT    &kp APOS
-&kp LSHFT  &kp LALT  &kp LCMD  &lt 2 SPACE  &kp LCTRL  &kp BSPC  &lt 1 ENTER  &kp RSHFT  &kp RSHFT  &mt LALT SLASH
+&kp Q      &kp L     &kp U     &kp COMMA    &kp DOT        &kp F       &kp W            &kp R      &kp Y      &kp P
+&kp E      &kp I     &kp A     &kp O        &kp MINUS      &kp K       &kp T            &kp N      &kp S      &kp H
+&kp Z      &kp X     &kp C     &kp V        &kp SEMICOLON  &kp G       &kp D            &kp M      &kp J      &kp B
+&kp LSHFT  &kp LALT  &kp LCMD  &lt 2 SPACE  &kp LCTRL      &kp DELETE  &lt 1 BACKSPACE  &kp ENTER  &kp RSHFT  &lt 3 SLASH
             >;
         };
 
@@ -58,20 +57,20 @@
         layer2 {
             label = "FUNCTION";
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
-&trans        &trans        &trans        &trans        &bt BT_CLR      &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
-&trans        &trans        &trans        &trans        &bt BT_CLR_ALL  &kp F11  &kp F12  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans          &kp DEL  &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
+&trans  &trans  &trans  &trans  &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
+&trans  &trans  &trans  &trans  &trans  &kp F11  &kp F12  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans  &trans  &trans
             >;
         };
 
         layer3 {
             label = "MOUSE";
             bindings = <
-&trans     &trans  &trans    &trans    &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans     &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
-&trans     &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
-&kp LSHFT  &trans  &kp LCMD  &kp LALT  &to 0   &trans  &trans    &trans    &to 0     &kp RALT
+&trans     &trans  &trans    &trans    &trans  &mkp MB1  &mkp MB2  &trans  &trans  &trans
+&trans     &trans  &trans    &trans    &trans  &mkp MB3  &trans    &trans  &trans  &trans
+&trans     &trans  &trans    &trans    &trans  &trans    &trans    &trans  &trans  &trans
+&kp LSHFT  &trans  &kp LCMD  &kp LALT  &to 0   &trans    &trans    &trans  &trans  &trans
             >;
         };
 
