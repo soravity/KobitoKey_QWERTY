@@ -62,9 +62,9 @@
         layer2 {
             label = "FUNCTION";
             bindings = <
-&kp LS(EQUAL)  &kp LS(INTERNATIONAL_3)  &kp LS(LEFT_BRACKET)  &kp LS(APOSTROPHE)  &kp LS(SLASH)  &trans  &trans    &trans   &trans     &trans
+&trans         &trans                   &trans                &trans              &trans         &trans  &trans    &trans   &trans     &trans
 &kp EQUAL      &kp INTERNATIONAL_3      &kp LEFT_BRACKET      &kp APOSTROPHE      &kp SLASH      &trans  &kp LEFT  &kp UP   &kp DOWN   &kp RIGHT
-&trans         &trans                   &trans                &trans              &trans         &trans  &kp HOME  &kp END  &kp PG_UP  &kp PG_DN
+&kp LS(EQUAL)  &kp LS(INTERNATIONAL_3)  &kp LS(LEFT_BRACKET)  &kp LS(APOSTROPHE)  &kp LS(SLASH)  &trans  &kp HOME  &kp END  &kp PG_UP  &kp PG_DN
 &trans         &trans                   &trans                &trans              &trans         &trans  &trans    &trans   &trans     &trans
             >;
         };
