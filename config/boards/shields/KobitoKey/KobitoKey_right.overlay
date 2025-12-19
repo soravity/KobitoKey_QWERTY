@@ -48,6 +48,5 @@
     input-processors = <
         &zip_xy_transform
         INPUT_TRANSFORM_Y_INVERT
-        &scroll_layer_4
     >;
 };
