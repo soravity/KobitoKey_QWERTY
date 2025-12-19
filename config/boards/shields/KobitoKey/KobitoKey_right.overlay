@@ -2,6 +2,21 @@
 #include "kobitokey.dtsi"
 #include <input/processors.dtsi>
 
+{
+    // スクロール変換 processor
+    zip_xy_to_scroll_mapper: zip_xy_to_scroll_mapper {
+        compatible = "zmk,input-processor-scroll";
+        divisor = <6>; // スクロール速度
+    };
+
+    // レイヤー4でのみスクロールに変換する processor
+    scroll_layer_4: scroll_layer_4 {
+        compatible = "zmk,input-processor-layer";
+        layer = <4>; // スクロール有効にしたいレイヤー番号
+        then = <&zip_xy_to_scroll_mapper>;
+    };
+};
+
 /* 列オフセット */
 &default_transform { col-offset = <5>; };
 
@@ -34,7 +49,6 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         cpi = <600>;
-        scroll-layers = <4>;
         
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -45,5 +59,9 @@
 &tb_right_split {
     device = <&tb_right>;
 
-    input-processors = <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>;
+    input-processors = <
+        &zip_xy_transform
+        INPUT_TRANSFORM_Y_INVERT
+        &scroll_layer_4
+    >;
 };
