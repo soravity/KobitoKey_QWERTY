@@ -2,6 +2,7 @@
 #include "kobitokey.dtsi"
 #include <input/processors.dtsi>
 
+/
 {
     // スクロール変換 processor
     zip_xy_to_scroll_mapper: zip_xy_to_scroll_mapper {
