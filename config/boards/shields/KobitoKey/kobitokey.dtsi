@@ -34,6 +34,18 @@
         >;
     };
 
+    /* 右側トラックボールのスクロール変換 processor */
+    zip_xy_to_scroll_mapper: zip_xy_to_scroll_mapper {
+        compatible = "zmk,input-processor-scroll";
+        divisor = <6>;
+    };
+
+    scroll_layer_4: scroll_layer_4 {
+        compatible = "zmk,input-processor-layer";
+        layer = <4>;
+        then = <&zip_xy_to_scroll_mapper>;
+    };
+
     /* 右側トラックボールを split 入力として扱う（ID=0） */
     split_inputs {
         #address-cells = <1>;
