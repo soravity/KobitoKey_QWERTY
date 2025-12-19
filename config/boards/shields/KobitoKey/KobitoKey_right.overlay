@@ -50,3 +50,11 @@
         INPUT_TRANSFORM_Y_INVERT
     >;
 };
+
+&tb_right_scroll {
+    device = <&tb_right>;
+
+    /* SCROLL レイヤーで XY をスクロールとして扱う */
+    input-processors = <&zip_xy_to_scroll_mapper>;
+    layers = <4>; /* 4番目のレイヤー = SCROLL */
+};
