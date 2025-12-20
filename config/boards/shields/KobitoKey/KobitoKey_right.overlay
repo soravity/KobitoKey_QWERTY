@@ -50,7 +50,7 @@
 
     /* SCROLL レイヤー用に XY をスクロールに変換 */
     scroll_input: scroll_input {
-        layers = <4>; /* SCROLL レイヤー */
+        layers = <1>; /* SCROLL レイヤー */
         input-processors = <&zip_xy_to_scroll_mapper>;
     };
 };
