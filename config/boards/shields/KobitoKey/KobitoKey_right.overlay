@@ -44,13 +44,5 @@
 
 &tb_right_split {
     device = <&tb_right>;
-
-    /* 通常レイヤー用 */
     input-processors = <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>;
-
-    /* SCROLL レイヤー用に XY をスクロールに変換 */
-    scroll_input: scroll_input {
-        layers = <1>; /* SCROLL レイヤー */
-        input-processors = <&zip_xy_to_scroll_mapper>;
-    };
 };
